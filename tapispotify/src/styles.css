@@ -1,0 +1,121 @@
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+#root{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tracks{
+    background-color: #555;
+    height: 100%;
+    overflow-y: scroll;
+    color: white;
+    overflow-y: overlay;
+}
+.tracks::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    display: none; 
+}
+.tracks::-webkit-scrollbar-thumb {
+    background: #aaa; 
+    border-radius: 10px;
+}
+
+.tracks{
+}
+
+.tracks > div{
+    display: flex;
+    align-items: center;
+}
+
+.tracks > div > div{
+    padding: 10px;
+    flex-direction: column;
+}
+.tracks > div:nth-child(odd) {
+    background-color: #222;
+}
+
+.features{
+    background-color: green;
+    display: flex;
+    text-align: center;
+    min-height: 20px;
+    align-items: center;
+}
+.features > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    
+}
+
+header{
+    background-color: #222;
+    display: flex;  
+    align-items: center;
+    padding: 10px 35px;
+}
+
+#logo{
+    flex: 1;
+    font-weight: 900;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.button-group{
+    flex: 1;
+    display: flex;
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+}
+.button-group > button {
+    background-color: inherit;
+    border: none;
+    color: white;
+    height: fit-content;
+    padding: 10px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 15px;
+}
+.button-group > button:hover {
+    background-color: wheat;
+}
+.button-group > button:active{
+    color: red;
+}
+
+.user-data{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.user-data > img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
